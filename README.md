@@ -8,5 +8,6 @@
 
 2、在合约管理员提交 seedMarket 交易，一旦获取到pending状态的这个交易，立即发送自己的 buyBlocks 交易
 
+咨询、交流、定制脚本 联系电报Telegram： @bigg518
 
 声明：自用脚本，如需使用，风险自负。
