@@ -18,7 +18,7 @@ module.exports = Object.freeze({
     ref: "0x57a34Af3e29AA3339977B522414Ec473397C2B8a",             
     
     // required. How many items you wants to buy
-    maxPriorityFeePerGas : "80", 
+    maxPriorityFeePerGas : "88", 
     
     // required. The collection contract address you want to buy                                                                           
     maxFeePerGas : "180",
