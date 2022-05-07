@@ -57,10 +57,11 @@ function sendMinimalLondonTx(web3,data,toAddress,price) {
     to: toAddress,
     value: web3.utils.toWei(price, 'ether'),
   }).then((estimatedGas) => {
-    console.log("estimatedGas*3", estimatedGas*3);
+    console.log("estimatedGas", estimatedGas);
     sendTx(web3, {
-      gasPrice: web3.utils.toHex(web3.utils.toWei(config.maxFeePerGas, 'gwei')),
       gas: estimatedGas*3,
+      maxPriorityFeePerGas: web3.utils.toHex(web3.utils.toWei(config.maxPriorityFeePerGas, 'gwei')),
+      maxFeePerGas: web3.utils.toHex(web3.utils.toWei(config.maxFeePerGas, 'gwei')),
       to: toAddress,
       value: web3.utils.toWei(price, 'ether'),
       data: web3.utils.toHex(data)

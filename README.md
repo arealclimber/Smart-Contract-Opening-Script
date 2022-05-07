@@ -1,3 +1,5 @@
+## 这个分支适合ETH、Polygon、AVAX等支持maxPriorityFeePerGas的公链，给小费抢得更快哦😄
+
 ## 智能合约抢开盘脚本
 
 这个脚本以抢这个项目的开盘为例 https://fyrise.io/ 

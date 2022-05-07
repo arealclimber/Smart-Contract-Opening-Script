@@ -15,20 +15,20 @@ module.exports = Object.freeze({
     price: "0.1",
 
     // required. 推荐钱包地址
-    ref: "0x57a34Af3e29AA3339977B522414Ec473397C2B8a",             
+    ref: "",      
     
-    // required. How many items you wants to buy
-    maxPriorityFeePerGas : "88", 
+    // required. 最高优先费
+    maxPriorityFeePerGas : "100", 
     
-    // required. The collection contract address you want to buy                                                                           
-    maxFeePerGas : "180",
+    // required. 每单位Gas的最高费用                                                                          
+    maxFeePerGas : "250",
  
     
     // required. The num you want to mint
     number: "1",
 
     // required. http provider from infura or alchemy. It must be ws
-    wssMainnet: "wss://avax.getblock.io/mainnet/ext/bc/C/ws?api_key=d4fa678a-4845-4a46-94e6-9bd2cfb6093b",
+    wssMainnet: "wss://matic.getblock.io/mainnet/?api_key=d4fa678a-4845-4a46-94e6-9bd2cfb6093b",
 
     // required. http provider from infura or alchemy. It must be wss
     wssRinkeby: "wss://eth-rinkeby.alchemyapi.io/v2/xxxxxx",
