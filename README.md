@@ -32,6 +32,7 @@
 
     maxFeePerGas : "gas费",
 
+    建议自己申请一个单独使用的节点，申请地址：https://getblock.io/
     wssMainnet: "wss高速节点",
 
 3、public.js
