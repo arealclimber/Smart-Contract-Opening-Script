@@ -61,8 +61,4 @@ https://nodejs.org/en/download/
 有什么好项目也可以推荐我哈
 
 
-咨询、交流、定制脚本 联系电报Telegram： @bigg518
 
-https://t.me/bigg518
-
-声明：自用脚本，如需使用，风险自负。
